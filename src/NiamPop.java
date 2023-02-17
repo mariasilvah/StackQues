@@ -5,17 +5,20 @@ public class NiamPop {
 		// TODO Auto-generated method stub
 
 		MyStack myStack= new MyStack(8);
-		myStack.Popo('e');
-		myStack.Popo('r');
-		myStack.Popo('d');
-		myStack.Popo('o');
-		myStack.Popo('m');
-		myStack.Popo('j');
-		myStack.Popo('s');
-		myStack.Popo('h');
-		
-		for(int x=0; x<myStack.stack.length; x++) {
-			System.out.println(myStack.max);
+		myStack.Push('e');
+		myStack.Push('d');
+		myStack.Push('r');
+		myStack.Push('o');
+		myStack.Push('m');
+		myStack.Push('j');
+		myStack.Push('s');
+		myStack.Push('h');
+
+		for(int x=0;x<myStack.stack.length; x++) {
+			
+			System.out.println(myStack.Popo());
+			//System.out.println("-----");
+			//System.out.println(myStack.dele());
 		}
 
 	}
