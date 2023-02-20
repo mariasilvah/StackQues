@@ -14,8 +14,10 @@ public class NiamPop {
 		myStack.Push('s');
 		myStack.Push('h');
 
+		System.out.println("MyStack:\n");
 		for(int x=0;x<myStack.stack.length; x++) {
 			
+			//System.out.println("stack:"+myStack.stack[x]+"\n");
 			System.out.println(myStack.Popo());
 			//System.out.println("-----");
 			//System.out.println(myStack.dele());

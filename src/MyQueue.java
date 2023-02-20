@@ -2,24 +2,27 @@
 public class MyQueue {//es como un pop(?)
 	int tail;
 	int max;
+	int head;
 	public char[]colas;
-	int top;
+	//int top;
 	
 	public MyQueue (int qsize) {
 		this.colas = new char[qsize];
 		this.max= this.colas.length;
 		this.tail=0;
-		this.top=0;
+		this.head=colas[0];
+		//this.top=0;
 	}
 	
-	//public void Push(char valor) {
-		//colas[top]=valor;
-		//top++;
-	//}
-	
-	public void Pushs(char valor) {
-		colas[top]=valor;
-		top++;
+	public void fullc (char vale) {
+		if(tail==max) {
+			System.out.println("Queue is full");
+		}
+		else {
+			colas[tail]=vale;
+			tail++;
+			//System.out.println(colas[2]+"\n");
+		}
 	}
 	
 	public char delete() {
@@ -29,9 +32,10 @@ public class MyQueue {//es como un pop(?)
 		}
 		else {
 			char el;
-			el=colas[top];
+			el=colas[head];
 			for(int x=0; x<colas.length-1; x++) {
 				colas[x]=colas[(x+1)];
+				tail--;
 			}
 		return el;
 		}
